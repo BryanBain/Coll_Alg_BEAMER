@@ -1,0 +1,167 @@
+\documentclass[t,usenames,dvipsnames]{beamer}
+\usetheme{Copenhagen}
+\setbeamertemplate{headline}{} % remove toc from headers
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{amsmath, xcolor, pgfplots}
+
+\pgfplotsset{compat = 1.16}
+\usetikzlibrary{arrows.meta, calc, decorations.pathreplacing}
+\pgfplotsset{every axis/.append style = {axis lines = middle, axis line style = {<->}}}
+\pgfplotsset{every tick label/.append style={font=\scriptsize}}
+\everymath{\displaystyle}
+
+\title{Complex Numbers}
+\author{}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Objectives}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+\section{Perform arithmetic operations with complex numbers}
+
+\begin{frame}{Intro}
+Complex numbers arose from the need to solve equations such as \[x^2 + 1 = 0\].
+\pause
+
+The solution to the above problem is 
+\[ x = \pm \sqrt{-1}    \]  \pause
+
+$\sqrt{-1}$ is the \alert{imaginary unit} $i$.
+\end{frame}
+
+\begin{frame}[c]{Properties of $i$}
+    \begin{itemize}
+        \item $i^2 = -1$ \newline\\ \pause
+        \item If $c$ is a real number with $c \geq 0$, then $\sqrt{-c} = i\sqrt{c}$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Complex Numbers}
+    A \alert{complex number} is a number in the form $a + bi$, where $a$ and $b$ are real numbers and $i$ is the imaginary unit. \newline\\  \pause
+    
+    A pure real number can be written as $a + 0i$ and a pure imaginary number can be written as $0 + bi$. \newline\\ \pause
+    
+    Adding, subtracting, and multiplying complex numbers is a lot like that of real numbers. \newline\\    \pause
+    
+    However, keep in mind that $i^2 = -1$.
+\end{frame}
+
+\begin{frame}{Example 1}
+Perform each indicated operation. Write your answers in $a + bi$ form.  \newline\\
+(a) \quad $(1 - 2i) - (3 + 4i)$
+\begin{align*}
+    \onslide<2->{&= 1 - 2i - 3 - 4i} \\[8pt]
+    \onslide<3->{&= -2 - 6i}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(b) \quad $(1-2i)(3+4i)$
+\begin{align*}
+    \onslide<2->{&= 3 + 4i - 6i - 8i^2} \\[8pt]
+    \onslide<3->{&= 3 - 2i - 8(-1)} \\[8pt]
+    \onslide<4->{&= 3 - 2i + 8} \\[8pt]
+    \onslide<5->{&= 11 - 2i}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(c) \quad $\sqrt{-3}\sqrt{-12}$
+\begin{align*}
+    \onslide<2->{&= i\sqrt{3} \cdot 2i\sqrt{3}} \\[8pt]
+    \onslide<3->{&= 2i^2\sqrt{9}} \\[8pt]
+    \onslide<4->{&= -2(3)} \\[8pt]
+    \onslide<5->{&= -6}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(d) \quad $\sqrt{(-3)(-12)}$  
+\begin{align*}
+    \onslide<2->{&=\sqrt{36}} \\[8pt]
+    \onslide<3->{&= 6}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 1}
+(e) \quad $\left(x-(1+2i)\right)\left(x-(1-2i)\right)$
+\begin{align*}
+    \onslide<2->{&= x^2 - x(1-2i) - x(1+2i) + (1+2i)(1-2i)} \\[8pt]
+    \onslide<3->{&= x^2-x+2ix-x-2ix+1-2i+2i-4i^2} \\[8pt]
+    \onslide<4->{&= x^2 - 2x + 1 - 4(-1)}   \\[8pt]
+    \onslide<5->{&= x^2 - 2x + 5}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Complex Conjugates}
+If $z = a + bi$ is a complex number, then the \alert{conjugate} of $z$ (denoted $\overline{z}$) is \[\overline{z} = a - bi\]    \newline\\ \pause
+
+Likewise, if $z = a - bi$, 
+\[ \overline{z} = a + bi \] \newline\\ \pause
+
+Complex conjugates are used to divide complex numbers and find complex solutions to equations.
+\end{frame}
+
+\begin{frame}{Example 2}
+Write your answer in $a + bi$ form for
+\[ \frac{1-2i}{3-4i}\]
+\begin{align*}
+    \onslide<2->{&= \frac{1-2i}{3-4i}\left(\frac{3+4i}{3+4i}\right)} \\[8pt]
+    \onslide<3->{&= \frac{3+4i-6i-8i^2}{9-12i+12i-16i^2}} \\[8pt]
+    \onslide<4->{&= \frac{11-2i}{25}} \\[8pt]
+    \onslide<5->{&= \frac{11}{25}-\frac{2}{25}i} 
+\end{align*}
+\end{frame}
+
+\begin{frame}{Properties of Complex Conjugates}
+    Let $z$ and $w$ be complex numbers. \newline\\
+    \begin{itemize}
+        \item $\overline{\overline{z}} = z$ \newline\\
+        \item $\overline{z}+\overline{w} = \overline{z+w}$ \newline\\
+        \item $\overline{z}\cdot \overline{w} = \overline{zw}$ \newline\\
+        \item $\left(\overline{z}\right)^n = \overline{z^n}$ for any natural number $n$ \newline\\
+        \item $z$ is a real number if and only if $\overline{z} = z$
+    \end{itemize}
+\end{frame}
+
+\section{Solve quadratic equations with complex solutions}
+
+\begin{frame}{Quadratic Equations with Complex Solutions}
+In the quadratic formula
+\[  x = \frac{-b\pm \sqrt{b^2-4ac}}{2a} \]  \newline\\
+the discriminant
+\[ b^2 - 4ac \] \newline\\
+tells us what type of solutions we will have.
+\end{frame}
+
+\begin{frame}{The Discriminant}
+    \begin{itemize}
+        \item $b^2 - 4ac > 0$ gives us 2 unique real solutions. \newline\\  \pause
+        \item $b^2 - 4ac = 0$ gives us 1 unique real solution (a double root). \newline\\ \pause
+        \item $b^2 - 4ac < 0$ gives us 2 complex solutions that are \emph{conjugates}.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Example 3}
+Solve $x^2 - 2x + 5 = 0$. Exact answers only.
+\begin{align*}
+    \onslide<2->{x &= \frac{-(-2) \pm \sqrt{(-2)^2 - 4(1)(5)}}{2(1)}} \\[8pt]
+    \onslide<3->{x &= \frac{2 \pm \sqrt{-16}}{2}} \\[8pt]
+    \onslide<4->{x &= \frac{2\pm 4i}{2}} \\[8pt]
+    \onslide<5->{x &= 1 \pm 2i}
+\end{align*}
+\end{frame}
+
+\end{document}
