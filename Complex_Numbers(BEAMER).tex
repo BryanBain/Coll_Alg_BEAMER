@@ -3,7 +3,7 @@
 \setbeamertemplate{headline}{} % remove toc from headers
 \beamertemplatenavigationsymbolsempty
 
-\usepackage{amsmath, xcolor, pgfplots}
+\usepackage{amsmath, xcolor, tikz, pgfplots}
 
 \pgfplotsset{compat = 1.16}
 \usetikzlibrary{arrows.meta, calc, decorations.pathreplacing}
@@ -147,11 +147,50 @@ tells us what type of solutions we will have.
 \end{frame}
 
 \begin{frame}{The Discriminant}
-    \begin{itemize}
-        \item $b^2 - 4ac > 0$ gives us 2 unique real solutions. \newline\\  \pause
-        \item $b^2 - 4ac = 0$ gives us 1 unique real solution (a double root). \newline\\ \pause
-        \item $b^2 - 4ac < 0$ gives us 2 complex solutions that are \emph{conjugates}.
-    \end{itemize}
+\begin{center}
+    $b^2 - 4ac > 0$ gives us 2 unique real solutions.   \newline\\ 
+    \begin{tikzpicture}
+        \begin{axis}[
+        xmin = -10.5, xmax = 10.5,
+        ymin = -10.5, ymax = 10.5,
+        xtick = {}, ytick = {}
+        ]
+        \addplot [domain=-4:4, blue, very thick, samples=200, smooth] {x^2-7};
+        \addplot [color=blue, mark = *, only marks] coordinates {(-2.65,0) (2.65,0)};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{The Discriminant}
+\begin{center}
+    $b^2 - 4ac = 0$ gives us 1 unique real solution (a double root). \newline\\ 
+    \begin{tikzpicture}
+    \begin{axis}[
+        xmin = -10.5, xmax = 10.5,
+        ymin = -10.5, ymax = 10.5,
+        xtick = {}, ytick = {}
+        ]
+        \addplot [domain=-4:5, blue, very thick, samples=200, smooth] {(x-1)^2};
+        \addplot [color=blue, mark = *] coordinates {(1,0)};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{The Discriminant}
+\begin{center}
+    $b^2 - 4ac < 0$ gives us 2 complex solutions that are \emph{conjugates}.  \newline\\
+    \begin{tikzpicture}
+    \begin{axis}[
+        xmin = -10.5, xmax = 10.5,
+        ymin = -10.5, ymax = 10.5,
+        xtick = {}, ytick = {}
+        ]
+        \addplot [domain=-4:5, blue, very thick, samples=200, smooth] {(x-1)^2+2};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
 \end{frame}
 
 \begin{frame}{Example 3}
