@@ -1,5 +1,5 @@
 ## Required Packages
-<ol>
+<ul>
   <li>amsmath</li>
   <li>array</li>
   <li>bm</li>
@@ -11,7 +11,7 @@
   <li>tikz</li>
   <li>tkz-graph</li>
   <li>xcolor</li>
-</ol>
+</ul>
   
 ## Suggested Order
 
