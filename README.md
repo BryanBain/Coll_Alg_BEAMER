@@ -1,3 +1,18 @@
+## Required Packages
+<ol>
+  <li>amsmath</li>
+  <li>array</li>
+  <li>bm</li>
+  <li>graphicx</li>
+  <li>pgf</li>
+  <li>pgfplots</li>
+  <li>standalone</li>
+  <li>tcolorbox</li>
+  <li>tikz</li>
+  <li>tkz-graph</li>
+  <li>xcolor</li>
+</ol>
+  
 ## Suggested Order
 
 <ol>
