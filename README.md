@@ -1,6 +1,7 @@
 ## Required Packages
 <ul>
   <li>amsmath</li>
+  <li>amssymb</li>
   <li>array</li>
   <li>bm</li>
   <li>graphicx</li>
