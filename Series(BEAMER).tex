@@ -1,0 +1,298 @@
+\documentclass[t,usenames,dvipsnames]{beamer}
+\usetheme{Copenhagen}
+\setbeamertemplate{headline}{} % remove toc from headers
+\beamertemplatenavigationsymbolsempty
+
+\usepackage{amsmath, xcolor, tikz, pgfplots, array, cancel}
+
+\pgfplotsset{compat = newest}
+\usetikzlibrary{arrows.meta, calc, decorations.pathreplacing}
+\pgfplotsset{every axis/.append style = {axis lines = middle}}
+\pgfplotsset{every tick label/.append style={font=\scriptsize}}
+\everymath{\displaystyle}
+
+\title{Series}
+\author{}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Objectives}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+\section{Expand the terms of a series}
+
+\begin{frame}{Series}
+A \alert{series} is a sequence in which we add the terms.	\newline\\  \pause
+
+Series are written using the explicit rule for a sequence with the Greek letter sigma $\Sigma$ indicating the terms of the sequence are to be added.	\newline\\
+\end{frame}
+
+\begin{frame}{General Form}
+The general form of a series is given below:
+\[
+\sum_{i=1}^{n} a_i = a_1 + a_2 + a_3 + \cdots + a_n
+\]
+
+where 
+\begin{itemize}
+	\item $i$ is the \textbf{index of summation}
+	\item 1 is the \textbf{lower limit of summation}
+	\item $n$ is the \textbf{upper limit of summation}
+\end{itemize}
+\bigskip  \pause
+
+When you write out the terms of the series to add, that is called \alert{expanding the series}.
+\end{frame}
+
+\begin{frame}{Example 1}
+Expand each of the following. Then find the sum.    \newline\\  
+(a) \quad $\sum_{k=1}^{4} \dfrac{2}{3^k}$   
+
+\begin{minipage}{0.6\textwidth}
+\begin{align*}
+    \onslide<2->{k &= 1: \quad \frac{2}{3}} \\[8pt]
+    \onslide<3->{k &= 2: \quad \frac{2}{9}} \\[8pt]
+    \onslide<4->{k &= 3: \quad \frac{2}{27}} \\[8pt]
+    \onslide<5->{k &= 4: \quad \frac{2}{81}}
+\end{align*}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+\onslide<6->{Sum: }
+\onslide<7->{$\frac{80}{81}$}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Example 1}
+(b) \quad $\sum_{n=0}^{3} \frac{n!}{2}$ \newline\\
+\begin{minipage}{0.6\textwidth}
+\begin{align*}
+    \onslide<2->{n = 0: \quad \frac{1}{2}} \\[8pt]
+    \onslide<3->{n = 1: \quad \frac{1}{2}} \\[8pt]
+    \onslide<4->{n = 2: \quad   1}  \\[8pt]
+    \onslide<5->{n = 3: \quad   3}
+\end{align*}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+\onslide<6->{Sum: }
+\onslide<7->{5}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Example 1}
+(c) \quad $\sum_{n=0}^{3} \dfrac{x^n}{n!}$  \newline\\
+\begin{minipage}{0.6\textwidth}
+\begin{align*}
+    \onslide<2->{n = 0: \quad 1} \\[8pt]
+    \onslide<3->{n = 1: \quad x} \\[8pt]
+    \onslide<4->{n = 2: \quad \frac{x^2}{2}}  \\[8pt]
+    \onslide<5->{n = 3: \quad \frac{x^3}{6}}
+\end{align*}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\onslide<6->{Sum: } \newline\\
+\onslide<7->{$1+x+\frac{x^2}{2}+\frac{x^3}{6}$}
+\end{minipage}
+\end{frame}
+
+\section{Write a series using sigma notation}
+
+\begin{frame}{Writing in Sigma Notation}
+It can be time-consuming to add a lot of terms of a series. One strategy is to find the sequence rule for the given series and evaluate it in a calculator.
+\end{frame}
+
+\begin{frame}{Example 2}
+Express each sum in sigma notation. Then evaluate. Round to 4 decimal places.  \newline\\
+(a) \quad $1 + 3 + 5 + \cdots + 987$    \newline\\
+\onslide<2->{Arithmetic sequence: 1, 3, 5, 7, ..., 987} 
+\onslide<3->{\[a_n = 2n - 1\]}
+\onslide<4->{Lower limit: }
+\begin{align*}
+    \onslide<5->{2n - 1 &= 1} \\
+    \onslide<6->{n &= 1}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 2}
+Upper limit:
+\begin{align*}
+    \onslide<2->{2n-1 &= 987} \\
+    \onslide<3->{n &= 494}
+\end{align*}
+\onslide<4->{\[\sum_{n=1}^{494}\left(2n-1\right) \onslide<5->{= 244,036}\]}
+\end{frame}
+
+\begin{frame}{Example 2}
+(b) \quad $3 + 9 + 27 + \cdots + 387,420,489$   \newline\\
+\onslide<2->{Geometric sequence: 3, 9, 27, 81, ..., 387,420,489}
+\onslide<3->{\[a_n = 3^n\]}
+\onslide<4->{Lower limit:}
+\begin{align*}
+    \onslide<5->{3^n &= 3} \\[6pt]
+    \onslide<6->{n &= 1}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 2}
+Upper limit:
+\begin{align*}
+    \onslide<2->{3^n &= 387,420,489} \\[6pt]
+    \onslide<3->{n\cdot \log_3(3) &= \log_3(387,420,489)} \\[6pt]
+    \onslide<4->{n &= 18}
+\end{align*}
+\onslide<5->{\[\sum_{n=1}^{18}3^n \onslide<6->{= 581,130,732}\]}
+\end{frame}
+
+\begin{frame}{Example 2}
+(c) \quad   $1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \cdots + \frac{1}{117}$   \newline\\
+    \onslide<2->{\[\frac{1}{1} - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \cdots + \frac{1}{117}\]}   \newline\\
+    \onslide<3->{\[\text{Rule:\quad} \frac{(-1)^{n+1}}{n}\]}    \newline\\
+    \begin{center}
+    \onslide<4->{Lower Limit: $n=1$} \quad \onslide<5->{Upper Limit: $n = 117$}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Example 2}
+    \[ \sum_{n=1}^{117} \frac{(-1)^{n+1}}{n} 
+    \onslide<2->{\approx 0.6974 }
+    \]
+\end{frame}
+
+\section{Work with arithmetic series}
+
+\begin{frame}{Arithmetic Series}
+An arithmetic series can be found by adding the terms of the arithmetic sequence.  
+\end{frame}
+
+\begin{frame}[shrink=5]{Example 3}
+Without using a calculator, find the sum of the first 100 natural numbers.  
+\onslide<2->{\[S = 1 + 2 + 3 + \cdots + 98 + 99 + 100\]}
+\begin{tabular}{cccccccccccccc}
+\onslide<3->{  & 1 & + & 2 & + & 3 & + & $\cdots$ & + & 98 & + & 99 & + & 100} \\
+\onslide<4->{+ & 100 & + & 99  & + & 98  & + & $\cdots$ & + & 3 & + & 2 & + & 1   \\ \hline}
+\onslide<5->{& 101 & + & 101 & + & 101 & + & $\cdots$ & + & 101 & + & 101 & + & 101} \\
+\end{tabular}
+\begin{align*}
+    \onslide<6->{2S &= 100(101)}    \\[8pt]
+    \onslide<7->{S &= 50(101)} 
+    \onslide<8->{= 5,050}
+\end{align*}
+\end{frame}
+
+\begin{frame}{General Formula for Arithmetic Series}
+
+The method of solving the example above suggests that to find the sum of an arithmetic series, add the first and last terms then multiply that sum by half the number of terms:    \newline\\    \pause
+\[
+S_n = \frac{n}{2}\left(a_1 + a_n\right)
+\]
+\newline\\  \pause
+In the next example, you will need to find the number of terms, $n$, that are being added. \newline\\    
+\end{frame}
+
+\begin{frame}{Example 4}
+Find the value of $n$ in each.  \newline\\  
+(a) \quad $\sum_{i=1}^{n}(5i-9) = 1,400$    \\[8pt]
+\onslide<2->{First term:}
+\onslide<3->{\[5(1)-9=-4\]}
+\onslide<4->{Last term:}
+\onslide<5->{\[5n-9\]}
+\end{frame}
+
+\begin{frame}{Example 4}
+\begin{align*}
+    1400 &= \frac{n}{2}\left(-4 + 5n - 9\right) \\[8pt]
+    \onslide<2->{1400 &= \frac{n}{2}\left(5n-13\right)} \\[8pt]
+    \onslide<3->{1400 &= 2.5n^2 - 6.5n} \\[6pt]
+    \onslide<4->{0 &= 2.5n^2 - 6.5n - 1400} \\[6pt]
+    \onslide<5->{n &= -22.4, \, 25}
+\end{align*}    
+\onslide<6->{\[n = 25\]}
+\end{frame}
+
+\end{document}
+
+
+
+\textbf{Example 4.} Find the value of $n$ in each.
+\begin{enumerate}[(a)]
+	\item $\displaystyle \sum_{i=1}^{n}(6i-11) = 2,460$
+	\item $\displaystyle \sum_{i=0}^{n}(1-2i) = -399$   \quad **Be careful with this one
+\end{enumerate}
+
+\subsection{Geometric Series}
+
+The sum, $S_n$, of the first $n$ terms of a geometric sequence is given by
+\[
+S_n = \frac{a_1(1-r^n)}{1-r}
+\]
+
+We can still put the series into the calculator to add also.	\newline\\
+
+\textbf{Example 5.} Find the sum of the first 18 terms of each series.
+\begin{enumerate}[(a)]
+	\item $2+(-8)+32+(-128)+\cdots$
+	\item $2+(-6)+18+(-54)+\cdots$
+	\item $5+15+45+135+\cdots$
+\end{enumerate}
+
+
+%\textbf{Example 5.} Evaluate each of the following.
+%\begin{enumerate}[(a)]
+%	\item $\displaystyle \sum_{i=1}^{10} 6\cdot 2^i$ \\[0.2in]
+%	
+%	\item $\displaystyle \sum_{i=1}^{8} 2\cdot 3^i$ \\[0.2in]
+%	
+%	\item $\displaystyle \sum_{k=1}^{6} 7\left(-\frac{2}{3}\right)^{k-1}$ \\[0.2in]
+%\end{enumerate}
+
+
+\subsubsection{Infinite Geometric Series}
+
+
+The formula
+\[
+S_n = \frac{a_1(1-r^n)}{1-r}
+\]
+
+works for a finite, or limited, number of terms.   \newline\\
+
+But what happens if we add up an unlimited, or infinite, number of terms?  \newline\\
+
+
+We are able to find a sum on the condition that $|r| < 1$, or to put it another way, $-1 < r < 1$.  \newline\\
+
+
+The sum of the infinite geometric series becomes 
+\[
+S_\infty = \frac{a_1}{1-r}
+\]
+
+
+An infinite series that has a sum that can be found is said to \textbf{converge}. \newline\\
+
+A series that does not converge is said to \textbf{diverge}.   \newline\\
+
+
+\textbf{Example 6.} Find the sum of each infinite series.
+\begin{enumerate}
+	\item $\dfrac{3}{8}-\dfrac{3}{16}+\dfrac{3}{32}-\dfrac{3}{64}+\cdots$ \\[0.2in]
+	
+	\item $3+2+\dfrac{4}{3}+\dfrac{8}{9}+\cdots$ \\[0.2in]
+	
+	\item $\displaystyle \sum_{i=1}^{\infty} -3.6(0.6)^{i-1}$    \\[0.2in]
+	
+	\item $\displaystyle \sum_{n=1}^{\infty} 2\left(\frac{1}{3}\right)^{n-1}$    \\[0.2in]
+	
+	\item $\displaystyle \sum_{i=1}^{\infty}\left(\frac{4}{3}\right)^{i}$   \\[0.2in]
+	
+	\item $\displaystyle \sum_{i=1}^{\infty} 0.1(2.5)^i$
+	\end{enumerate}
