@@ -218,81 +218,212 @@ Find the value of $n$ in each.  \newline\\
 \onslide<6->{\[n = 25\]}
 \end{frame}
 
-\end{document}
+\begin{frame}{Example 4}
+Find the value of $n$ in each.  \newline\\  
+(b) \quad $\sum_{i=1}^{n}(6i-11) = 2,460$    \\[8pt]
+\onslide<2->{First term:}
+\onslide<3->{\[6(1)-11=-5\]}
+\onslide<4->{Last term:}
+\onslide<5->{\[6n-11\]}
+\end{frame}
+
+\begin{frame}{Example 4}
+\begin{align*}
+    2460 &= \frac{n}{2}\left(-5 + 6n - 11\right) \\[8pt]
+    \onslide<2->{2460 &= \frac{n}{2}\left(6n-16\right)} \\[8pt]
+    \onslide<3->{2460 &= 3n^2 - 8n} \\[6pt]
+    \onslide<4->{0 &= 3n^2 - 8n - 2460} \\[6pt]
+    \onslide<5->{n &= -27.\bar{3}, \, 30}
+\end{align*}    
+\onslide<6->{\[n = 30\]}
+\end{frame}
 
 
 
-\textbf{Example 4.} Find the value of $n$ in each.
-\begin{enumerate}[(a)]
-	\item $\displaystyle \sum_{i=1}^{n}(6i-11) = 2,460$
-	\item $\displaystyle \sum_{i=0}^{n}(1-2i) = -399$   \quad **Be careful with this one
-\end{enumerate}
 
-\subsection{Geometric Series}
+\begin{frame}{Example 4}
+Find the value of $n$ in each.  \newline\\  
+(c) \quad $\sum_{i=0}^{n}(1-2i) = -399$ \quad **Be careful with this one   \\[8pt]
+\onslide<2->{First term:}
+\onslide<3->{\[1-2(0)=1\]}
+\onslide<6->{Last term:}
+\onslide<7->{\[1-2n\]}
+\end{frame}
 
-The sum, $S_n$, of the first $n$ terms of a geometric sequence is given by
+\begin{frame}{Example 4}
+\begin{align*}
+    -399 &= \frac{n+1}{2}\left(1 + 1 - 2n\right) \\[8pt]
+    \onslide<2->{-399 &= \frac{n+1}{2}\left(2-2n\right)} \\[8pt]
+    \onslide<3->{-399 &= (n+1)(1-n)} \\[6pt]
+    \onslide<4->{-399 &= -n^2+1} \\[6pt]
+    \onslide<5->{-400 &= -n^2} \\[6pt]
+    \onslide<6->{400 &= n^2} \quad \onslide<7->{\longrightarrow n = -20, \, 20}
+\end{align*}    
+\onslide<8->{\[n = 20\]}
+\end{frame}
+
+\section{Find the sum of a finite geometric series}
+
+\begin{frame}{Geometric Series}
+The sum, $S_n$, of the first $n$ terms of a geometric sequence is given by  \newline\\ 
+\[
+S_n = \frac{\text{(first term)}(1-r^n)}{1-r}
+\]
+\end{frame}
+
+\begin{frame}{Example 5}
+(a) \quad $0.5+2.5+12.5+\cdots+39062.5$ \newline\\
+\onslide<2->{Common Ratio: } \onslide<3->{$2.5/0.5 = 5$} \newline\\
+\onslide<4->{$y$-intercept: $0.5/5 = 0.1$} \newline\\
+\onslide<5->{Rule: 
+\[ 0.1(5)^n  \]
+}
+\end{frame}
+
+\begin{frame}{Example 5}
+Solving for $n$:
+\begin{align*}
+    \onslide<2->{0.1(5)^n &= 39062.5} \\[8pt]
+    \onslide<3->{5^n &= 390,625}  \\[8pt]
+    \onslide<4->{n &= \log_5(390,625)} \\[8pt]
+    \onslide<5->{n &= 8}
+\end{align*}
+\onslide<6->{\[\sum_{i=1}^{8} 0.1(5)^i \onslide<7->{= 48,828}\]}
+\end{frame}
+
+\begin{frame}{Example 5}
+Write each in sigma notation and find the sum.  \newline\\
+(b) \quad $2+(-8)+32+(-128)+\cdots+33,554,432$  \newline\\
+\onslide<2->{Common Ratio: } \onslide<3->{$-8/2 = -4$} \newline\\
+\onslide<4->{$y$-intercept: $-1/2$} \newline\\
+\onslide<5->{Rule: 
+\[ -\frac{1}{2}\left(-4\right)^n  \]
+}
+\end{frame}
+
+\begin{frame}{Example 5}
+Solving for $n$:
+\begin{align*}
+    \onslide<2->{-\frac{1}{2}\left(-4\right)^n &= 33,554,432} \\[8pt]
+    \onslide<3->{(-4)^n &= -67,108,864}  \\[8pt]
+    \onslide<4->{n &= \log_4(67,108,864)} \\[8pt]
+    \onslide<5->{n &= 13}
+\end{align*}
+\onslide<6->{\[\sum_{i=1}^{13} \left(-\frac{1}{2}\right)(-4)^i \onslide<7->{= 26,843,546}\]}
+\end{frame}
+
+\section{Find the sum of an infinite geometric series}
+
+\begin{frame}{Formula Issues}
+    The formula \newline\\
 \[
 S_n = \frac{a_1(1-r^n)}{1-r}
 \]
-
-We can still put the series into the calculator to add also.	\newline\\
-
-\textbf{Example 5.} Find the sum of the first 18 terms of each series.
-\begin{enumerate}[(a)]
-	\item $2+(-8)+32+(-128)+\cdots$
-	\item $2+(-6)+18+(-54)+\cdots$
-	\item $5+15+45+135+\cdots$
-\end{enumerate}
-
-
-%\textbf{Example 5.} Evaluate each of the following.
-%\begin{enumerate}[(a)]
-%	\item $\displaystyle \sum_{i=1}^{10} 6\cdot 2^i$ \\[0.2in]
-%	
-%	\item $\displaystyle \sum_{i=1}^{8} 2\cdot 3^i$ \\[0.2in]
-%	
-%	\item $\displaystyle \sum_{k=1}^{6} 7\left(-\frac{2}{3}\right)^{k-1}$ \\[0.2in]
-%\end{enumerate}
-
-
-\subsubsection{Infinite Geometric Series}
-
-
-The formula
-\[
-S_n = \frac{a_1(1-r^n)}{1-r}
-\]
-
+\newline\\
 works for a finite, or limited, number of terms.   \newline\\
 
-But what happens if we add up an unlimited, or infinite, number of terms?  \newline\\
+But what happens if we add up an unlimited, or infinite, number of terms? 
+\end{frame}
 
-
-We are able to find a sum on the condition that $|r| < 1$, or to put it another way, $-1 < r < 1$.  \newline\\
+\begin{frame}{Infinite Series Formula}
+We are able to find a sum on the condition that $|r| < 1$, or to put it another way, $-1 < r < 1$.  \newline\\  \pause
 
 
 The sum of the infinite geometric series becomes 
 \[
-S_\infty = \frac{a_1}{1-r}
+S_\infty = \frac{\text{first term}}{1-r}
 \]
+\newline\\  \pause
 
+An infinite series that has a sum that can be found is said to \alert{converge}. \newline\\   \pause
 
-An infinite series that has a sum that can be found is said to \textbf{converge}. \newline\\
+A series that does not converge is said to \alert{diverge}. 
+\end{frame}
 
-A series that does not converge is said to \textbf{diverge}.   \newline\\
+\begin{frame}{Example 6}
+Find the sum of each infinite series    \newline\\  
+(a) \quad $\frac{3}{8}-\frac{3}{16}+\frac{3}{32}-\frac{3}{64}+\cdots$   \newline\\
+\onslide<2->{Common ratio:} \newline\\
+\onslide<3->{\[\frac{\tfrac{-3}{16}}{\tfrac{3}{8}} \onslide<4->{= -\frac{1}{2}}\]}    \newline\\
+\onslide<4->{\[-1 < -\frac{1}{2} < 1\]}
+\end{frame}
 
+\begin{frame}{Example 6}
+\begin{align*}
+    S_\infty &= \frac{\text{first term}}{1-r}   \\[12pt]
+    \onslide<2->{&= \frac{3/8}{1-(-1/2)}}   \\[12pt]
+    \onslide<3->{&= \frac{1}{4}}
+\end{align*}
+\end{frame}
 
-\textbf{Example 6.} Find the sum of each infinite series.
-\begin{enumerate}
-	\item $\dfrac{3}{8}-\dfrac{3}{16}+\dfrac{3}{32}-\dfrac{3}{64}+\cdots$ \\[0.2in]
-	
-	\item $3+2+\dfrac{4}{3}+\dfrac{8}{9}+\cdots$ \\[0.2in]
-	
-	\item $\displaystyle \sum_{i=1}^{\infty} -3.6(0.6)^{i-1}$    \\[0.2in]
-	
-	\item $\displaystyle \sum_{n=1}^{\infty} 2\left(\frac{1}{3}\right)^{n-1}$    \\[0.2in]
-	
-	\item $\displaystyle \sum_{i=1}^{\infty}\left(\frac{4}{3}\right)^{i}$   \\[0.2in]
-	
-	\item $\displaystyle \sum_{i=1}^{\infty} 0.1(2.5)^i$
-	\end{enumerate}
+\begin{frame}{Example 6}
+Find the sum of each infinite series    \newline\\  
+(b) \quad $3+2+\dfrac{4}{3}+\dfrac{8}{9}+\cdots$   \newline\\
+\onslide<2->{Common ratio:} \newline\\
+\onslide<3->{\[\frac{2}{3}\]}    \newline\\
+\onslide<4->{\[-1 < \frac{2}{3} < 1\]}
+\end{frame}
+
+\begin{frame}{Example 6}
+\begin{align*}
+    S_\infty &= \frac{\text{first term}}{1-r}   \\[12pt]
+    \onslide<2->{&= \frac{3}{1-(2/3)}}   \\[12pt]
+    \onslide<3->{&= 9}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 6}
+(c) \quad $\sum_{i=1}^{\infty} -3.6(0.6)^{i-1}$ \newline\\
+\onslide<2->{Common Ratio:}
+\onslide<3->{\[0.6\]}   
+\onslide<4->{\[-1 < 0.6 < 1\]}
+\onslide<5->{First Term:}
+\onslide<6->{\[-3.6(0.6)^{1-1} \onslide<7->{=-3.6}\]}
+\end{frame}
+
+\begin{frame}{Example 6}
+\begin{align*}
+    S_\infty &= \frac{\text{first term}}{1-r}   \\[12pt]
+    \onslide<2->{&= \frac{-3.6}{1-0.6}} \\[12pt]
+    \onslide<3->{&= -9}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 6}
+(d) \quad   $\sum_{n=1}^{\infty} 2\left(\frac{1}{3}\right)^{n-1}$   \newline\\
+\onslide<2->{Common Ratio:}
+\onslide<3->{\[\frac{1}{3}\]}   
+\onslide<4->{\[-1 < \frac{1}{3} < 1\]}
+\onslide<5->{First Term:}
+\onslide<6->{\[2\left(\frac{1}{3}\right)^{1-1} \onslide<7->{=2}\]}
+\end{frame}
+
+\begin{frame}{Example 6}
+\begin{align*}
+    S_\infty &= \frac{\text{first term}}{1-r}   \\[12pt]
+    \onslide<2->{&= \frac{2}{1-(1/3)}} \\[12pt]
+    \onslide<3->{&= 3}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 6}
+(e) \quad $\sum_{i=1}^{\infty}\left(\frac{4}{3}\right)^{i}$ \newline\\
+\onslide<2->{Common Ratio:}
+\onslide<3->{\[\frac{4}{3}\]}   \newline\\
+\onslide<4->{\[\frac{4}{3} > 1\]}   \newline\\
+\begin{center}
+\onslide<5->{Diverges}
+\end{center}
+\end{frame}
+
+\begin{frame}{Example 6}
+(f) \quad $\sum_{i=1}^{\infty} 0.1(-2.5)^i$  \newline\\
+\onslide<2->{Common Ratio:}
+\onslide<3->{\[-2.5\]}   \newline\\
+\onslide<4->{\[-2.5 < -1\]}   \newline\\
+\begin{center}
+\onslide<5->{Diverges}
+\end{center}
+\end{frame}
+
+\end{document}
