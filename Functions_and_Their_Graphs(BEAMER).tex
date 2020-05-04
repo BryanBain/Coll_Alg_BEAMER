@@ -4,7 +4,6 @@
 \beamertemplatenavigationsymbolsempty
 
 \usepackage{amsmath, tikz, xcolor, pgfplots, array}
-\usetkzobj{all}
 \pgfplotsset{compat = 1.16}
 \usetikzlibrary{arrows.meta, calc, decorations.pathreplacing}
 \pgfplotsset{every axis/.append style = {axis lines = middle, axis line style = {<->}}}
@@ -146,7 +145,7 @@ Not a Function}
     \addplot [blue, domain = -1.5:1.75,samples=300, <->, very thick]
       {x^2 - 0.5};
     \plot [fill = black] (1,1.5) circle (3pt);
-    \plot [color=blue, fill = white] (1,0.5) circle (3pt);
+    \plot [blue, fill = white] (1,0.5) circle (3pt);
 \end{axis}
 \end{tikzpicture}
 \end{minipage} 
