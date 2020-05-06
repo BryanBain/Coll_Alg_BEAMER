@@ -77,9 +77,7 @@ xmin = -3.5, xmax = 3.5,
 \section{Solve rational inequalities}
 
 \begin{frame}{Rational Inequalities}
-When solving rational inequalities, first be sure that there is a 0 on one side of your inequality. You'll want to simplify the other side (i.e. find a common denominator to combine the fractions.) \newline\\ \pause
-
-Your \alert{critical values} will be where the {\color{blue}\textbf{numerator = 0}} and the {\color{blue}\textbf{denominator = 0}}  \newline\\  \pause
+When solving rational inequalities, your \alert{critical values} will be where the {\color{blue}\textbf{denominator = 0}} and the {\color{blue}\textbf{solution to the inequality as an equation}}.  \newline\\  \pause
 
 \emph{Note:} The critical values of the {\color{blue}\textbf{denominator}} will \underline{always} be open circles on the number line.
 \end{frame}
@@ -88,17 +86,17 @@ Your \alert{critical values} will be where the {\color{blue}\textbf{numerator = 
 Solve each. Write your answers using interval notation. \newline\\
 (a) \quad $\frac{3x+9}{2x-5} \leq 0$
 \begin{align*}
-    \onslide<2->{3x+9&=0 & 2x-5&=0} \\
-    \onslide<3->{x&=-3 & x&=\frac{5}{2}} \\
+    \onslide<2->{2x-5&=0 & \onslide<4->{3x+9&=0}} \\
+    \onslide<3->{x&=\frac{5}{2} & \onslide<5->{x&=-3}} \\
 \end{align*}
 \begin{center}
-\onslide<4->{\begin{tikzpicture}
+\onslide<6->{\begin{tikzpicture}
 \draw[<->] (-2.5,0) -- (2.5,0);
 \draw (-1.5,0.15) -- (-1.5,-0.15) node [below] {$-3$};
 \draw (1.5,0.15) -- (1.5,-0.15) node [below] {$\tfrac{5}{2}$};
-\onslide<5->{\draw[color=blue, fill=blue] (-1.5,0) circle [radius=2.5pt];}
-\onslide<5->{\draw[color=blue, fill=white] (1.5,0) circle [radius=2.5pt];}
-\onslide<6->{\draw[color=blue, ultra thick, shorten >= 2.5pt] (-1.5,0) -- (1.5,0);}
+\onslide<7->{\draw[color=blue, fill=blue] (-1.5,0) circle [radius=2.5pt];}
+\onslide<8->{\draw[color=blue, fill=white] (1.5,0) circle [radius=2.5pt];}
+\onslide<9->{\draw[color=blue, ultra thick, shorten >= 2.5pt] (-1.5,0) -- (1.5,0);}
 \end{tikzpicture}}
 \end{center}
 \onslide<7->{\[\left[-3, \frac{5}{2}\right) \]}
@@ -107,31 +105,26 @@ Solve each. Write your answers using interval notation. \newline\\
 \begin{frame}{Example 2}
 (b) \quad $\frac{4-x}{x+1} > 2$
 \begin{align*}
-    \onslide<2->{\frac{4-x}{x+1} &> 2} \\[8pt]
-    \onslide<3->{\frac{4-x}{x+1} - 2 &> 0} \\[8pt]
-    \onslide<4->{\frac{4-x}{x+1} - \frac{2(x+1)}{x+1} &> 0} \\[8pt]
-    \onslide<5->{\frac{4-x}{x+1}-\frac{2x+2}{x+1} &> 0} \\[8pt]
-    \onslide<6->{\frac{-3x+2}{x+1} &> 0}
+    \onslide<2->{x+1 &=0    &  \onslide<4->{\frac{4-x}{x+1} &= \frac{2}{1}} } \\[8pt]
+    \onslide<3->{x &= -1    &  \onslide<5->{2(x+1) &= 4-x} } \\[8pt]
+    \onslide<6->{&  &   2x+2 &= 4-x} \\[8pt]
+    \onslide<7->{&  &   3x &= 2} \\[8pt]
+    \onslide<8->{&  &   x &= \frac{2}{3}}
 \end{align*}
 \end{frame}
 
-\begin{frame}{Example 2}
-\[ \frac{-3x+2}{x+1} > 0 \]
-\begin{align*}
-    \onslide<2->{-3x+2&=0 & x+1&=0} \\[4pt]
-    \onslide<3->{x&=\frac{2}{3} & x&=-1} \\
-\end{align*}
+\begin{frame}[c]{Example 2 \quad $\frac{4-x}{x+1} > 2$}
 \begin{center}
-\onslide<4->{\begin{tikzpicture}
+\begin{tikzpicture}
 \draw[<->] (-2.5,0) -- (2.5,0);
 \draw (-1.5,0.15) -- (-1.5,-0.15) node [below] {$-1$};
-\draw (1.5,0.15) -- (1.5,-0.15) node [below] {$\tfrac{2}{3}$};
-\onslide<5->{\draw[color=blue, fill=white] (-1.5,0) circle [radius=2.5pt];}
-\onslide<5->{\draw[color=blue, fill=white] (1.5,0) circle [radius=2.5pt];}
-\onslide<6->{\draw[color=blue, ultra thick, shorten <= 2.5pt, shorten >= 2.5pt] (-1.5,0) -- (1.5,0);}
-\end{tikzpicture}}
+\draw (1.5,0.15) -- (1.5,-0.15) node [below] {$\frac{2}{3}$};
+\onslide<2->{\draw[color=blue, fill=white] (-1.5,0) circle [radius=2.5pt];}
+\onslide<2->{\draw[color=blue, fill=white] (1.5,0) circle [radius=2.5pt];}
+\onslide<3->{\draw[color=blue, ultra thick, shorten <= 2.5pt, shorten >= 2.5pt] (-1.5,0) -- (1.5,0);}
+\end{tikzpicture}
 \end{center}
-\onslide<7->{\[\left(-1, \frac{2}{3}\right)\]}
+\onslide<4->{\[\left(-1, \frac{2}{3}\right)\]}
 \end{frame}
 
 \begin{frame}{Example 2}
@@ -207,12 +200,14 @@ ymin = -6, ymax = 10
 \begin{frame}{Example 2}
 (d) \quad $\frac{x+2}{x-3} < 2x-2$
 \begin{align*}
-    \onslide<2->{\frac{x+2}{x-3} &= 2x-2} \\[8pt]
-    \onslide<3->{\frac{x+2}{x-3} &= \frac{(2x-2)(x-3)}{x-3}} \\[8pt]
-    \onslide<4->{\frac{x+2}{x-3} &= \frac{2x^2-8x+6}{x-3}} \\[8pt]
-    \onslide<5->{x+2 &= 2x^2 - 8x + 6} \\[6pt]
-    \onslide<6->{2x^2 - 9x + 4 &= 0} \\[6pt]
-    \onslide<7->{x &= \frac{1}{2}, \, 4}
+    \onslide<2->{x-3 &= 0 & \onslide<4->{\frac{x+2}{x-3} &= \frac{2x-2}{1}}} \\[8pt]
+    \onslide<3->{x &= 3 & \onslide<5->{(2x-2)(x-3) &= x+2}} \\[8pt]
+    \onslide<6->{& & 2x^2-8x+6 &= x+2} \\[8pt]
+    \onslide<7->{& & 2x^2 - 9x + 4 &= 0} \\[8pt]
+    % \onslide<4->{\frac{x+2}{x-3} &= \frac{2x^2-8x+6}{x-3}} \\[8pt]
+    % \onslide<5->{x+2 &= 2x^2 - 8x + 6} \\[6pt]
+    % \onslide<6->{2x^2 - 9x + 4 &= 0} \\[6pt]
+    \onslide<8->{& & x &= \frac{1}{2}, \, 4}
 \end{align*}
 \end{frame}
 
