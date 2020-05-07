@@ -5,6 +5,7 @@
   <li>array</li>
   <li>bm</li>
   <li>cancel</li>
+  <li>colortbl</li>
   <li>graphicx</li>
   <li>pgf</li>
   <li>pgfplots</li>
