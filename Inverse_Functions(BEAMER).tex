@@ -3,7 +3,7 @@
 \setbeamertemplate{headline}{} % remove toc from headers
 \beamertemplatenavigationsymbolsempty
 
-\usepackage{amsmath, xcolor, tikz, pgfplots, array, tcolorbox}
+\usepackage{amsmath, xcolor, tikz, pgfplots, array, tcolorbox, colortbl, bm}
 
 \pgfplotsset{compat = newest}
 \usetikzlibrary{arrows.meta, calc, decorations.pathreplacing}
@@ -285,8 +285,8 @@ Find the domain and range of the inverse of each. \newline\\
 \setlength{\extrarowheight}{6pt}
 \begin{tabular}{c|c|c}
                 &  \textbf{Domain}  &   \textbf{Range}  \\      \hline
-    $f(x)$      &  \onslide<4->{\color{red}$(-\infty,\infty)$}  &  \onslide<6->{\color{blue}$(-\infty,\infty)$}                   \\[6pt] \hline
-    $f^{-1}(x)$ & \onslide<7->{\color{blue}$(-\infty,\infty)$}  & \onslide<5->{\color{red}$(-\infty,\infty)$}                  \\[6pt]
+    $f(x)$      &  \onslide<4->{\cellcolor{yellow!75}$\bm{(-\infty,\infty)}$}  &  \onslide<6->{\cellcolor{green!60}$\bm{(-\infty,\infty)}$}                   \\[6pt] \hline
+    $f^{-1}(x)$ & \onslide<7->{\cellcolor{green!60}$\bm{(-\infty,\infty)}$}  & \onslide<5->{\cellcolor{yellow!75}$\bm{(-\infty,\infty)}$}                  \\[6pt]
 \end{tabular}}
 \end{center}
 \begin{align*}
@@ -303,13 +303,13 @@ Find the domain and range of the inverse of each. \newline\\
 \setlength{\extrarowheight}{6pt}
 \begin{tabular}{c|c|c}
                 &  \textbf{Domain}  &   \textbf{Range}  \\      \hline
-    $g(x)$      &  \onslide<4->{\color{red}$x \neq 1$}  &  \onslide<7->{\color{blue}$y \neq -2$}                   \\[6pt] \hline
-    $g^{-1}(x)$ & \onslide<6->{\color{blue}$x \neq -2$}  & \onslide<5->{\color{red}$y \neq 1$}                  \\[6pt]
+    $g(x)$      &  \onslide<4->{\cellcolor{yellow!75}$\bm{x \neq 1}$}  &  \onslide<7->{\cellcolor{green!60}$\bm{y \neq -2}$}                   \\[6pt] \hline
+    $g^{-1}(x)$ & \onslide<6->{\cellcolor{green!60}$\bm{x \neq -2}$}  & \onslide<5->{\cellcolor{yellow!75}$\bm{y \neq 1}$}                  \\[6pt]
 \end{tabular}}
 \end{center}
 \begin{align*}
-\onslide<8->{\text{Domain of } g^{-1}(x): &\quad (\infty, -2) \cup (-2,\infty)}    \newline\\
-\onslide<9->{\text{Range of } g^{-1}(x): &\quad (\infty, 1) \cup (1,\infty)}
+\onslide<8->{\text{Domain of } g^{-1}(x): &\quad (-\infty, -2) \cup (-2,\infty)}    \newline\\
+\onslide<9->{\text{Range of } g^{-1}(x): &\quad (-\infty, 1) \cup (1,\infty)}
 \end{align*}
 \end{frame}
 
@@ -321,8 +321,8 @@ Find the domain and range of the inverse of each. \newline\\
 \setlength{\extrarowheight}{6pt}
 \begin{tabular}{c|c|c}
                 &  \textbf{Domain}  &   \textbf{Range}  \\      \hline
-    $h(x)$      &  \onslide<4->{\color{red}$x \geq -2$}  &  \onslide<6->{\color{blue}$y \geq -1$}                   \\[6pt] \hline
-    $h^{-1}(x)$ & \onslide<7->{\color{blue}$x \geq -1$}  & \onslide<5->{\color{red}$y \geq -2$}                  \\[6pt]
+    $h(x)$      &  \onslide<4->{\cellcolor{yellow!75}$\bm{x \geq -2}$}  &  \onslide<6->{\cellcolor{green!60}$\bm{y \geq -1}$}                   \\[6pt] \hline
+    $h^{-1}(x)$ & \onslide<7->{\cellcolor{green!60}$\bm{x \geq -1}$}  & \onslide<5->{\cellcolor{yellow!75}$\bm{y \geq -2}$}                  \\[6pt]
 \end{tabular}}
 \end{center}
 \begin{align*}
@@ -352,11 +352,12 @@ ymin=0, ymax = 8
 \begin{align*}
     \onslide<2->{y &= x^2 - 2x + 4} \\[6pt]
     \onslide<3->{x &= {\color{red}y}^2 - 2{\color{red}y} + 4} \\[6pt]
-    \onslide<4->{x-3 &= ({\color{red}y} - 1)^2} \\[6pt]
-    \onslide<5->{{\color{red}y} - 1 &= \pm \sqrt{x-3}} \\[6pt]
-    \onslide<6->{{\color{red}y} &= 1 \pm \sqrt{x-3}} \\[6pt]
-    \onslide<7->{j^{-1}(x) &= 1 \pm \sqrt{x-3}} \\[6pt]
-    \onslide<8->{j^{-1}(x) &= 1 - \sqrt{x-3}}
+    \onslide<4->{x &= ({\color{red}y} - 1)^2+3} \\[6pt]
+    \onslide<5->{x-3 &= ({\color{red}y} - 1)^2} \\[6pt]
+    \onslide<6->{\pm \sqrt{x-3} &= {\color{red}y} - 1} \\[6pt]
+    \onslide<7->{1\pm \sqrt{x-3} &= \color{red}y} \\[6pt]
+    \onslide<8->{j^{-1}(x) &= 1 \pm \sqrt{x-3}} \\[6pt]
+    \onslide<9->{j^{-1}(x) &= 1 - \sqrt{x-3}}
 \end{align*}
 \end{frame}
 
@@ -367,8 +368,8 @@ ymin=0, ymax = 8
 \setlength{\extrarowheight}{5pt}
 \begin{tabular}{c|c|c}
                 &   \textbf{Domain}             &   \textbf{Range}              \\ \hline 
-    $j(x)$      & \onslide<3->{$x \leq 1$}      & \onslide<6->{$y \geq 3$}      \\[5pt] \hline
-    $j^{-1}(x)$ & \onslide<5->{$x \geq 3$}      & \onslide<4->{$y \leq 1$}      \\[5pt]
+    $j(x)$      & \onslide<3->{\cellcolor{yellow!75}$\bm{x \leq 1}$}      & \onslide<6->{\cellcolor{green!60}$\bm{y \geq 3}$}      \\[5pt] \hline
+    $j^{-1}(x)$ & \onslide<5->{\cellcolor{green!60}$\bm{x \geq 3}$}      & \onslide<4->{\cellcolor{yellow!75}$\bm{y \leq 1}$}      \\[5pt]
 \end{tabular}}
 \end{center}
 \begin{align*}
